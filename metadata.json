@@ -1,0 +1,8 @@
+{
+  "name": "Push Vantage Ltd",
+  "description": "Sew It. Brand It. Print It. Custom apparel manufacturing, reflective safety wear, PPE, corporate uniforms, promotional merchandise, and screen printing in Nairobi, Kenya.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
