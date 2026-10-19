@@ -71,7 +71,7 @@ export const HomePage: React.FC = () => {
                   className="absolute left-[3%] top-0 w-[48%] -rotate-6 aspect-square overflow-hidden rounded-2xl bg-white shadow-md border border-[#E8E2D8] p-3 transition-transform hover:scale-105 hover:rotate-0 cursor-pointer"
                 >
                   <img
-                    src="/src/assets/images/product_reflective_overalls_1792390996791.jpg"
+                    src="/images/product_reflective_overalls_1792390996791.jpg"
                     alt="Reflective Cargo Overalls"
                     className="w-full h-full object-contain"
                   />
@@ -89,7 +89,7 @@ export const HomePage: React.FC = () => {
                   className="absolute right-0 top-[12%] w-[50%] rotate-3 aspect-square overflow-hidden rounded-2xl bg-white shadow-md border border-[#E8E2D8] p-3 transition-transform hover:scale-105 hover:rotate-0 cursor-pointer"
                 >
                   <img
-                    src="/src/assets/images/shop_hoodies_sweatshirts_1792391772659.jpg"
+                    src="/images/shop_hoodies_sweatshirts_1792391772659.jpg"
                     alt="Corporate Hoodie"
                     className="w-full h-full object-contain"
                   />
@@ -107,7 +107,7 @@ export const HomePage: React.FC = () => {
                   className="absolute bottom-2 left-[14%] w-[44%] -rotate-3 aspect-square overflow-hidden rounded-2xl bg-white shadow-md border border-[#E8E2D8] p-3 transition-transform hover:scale-105 hover:rotate-0 cursor-pointer"
                 >
                   <img
-                    src="/src/assets/images/shop_branded_mugs_drinkware_1792391771954.jpg"
+                    src="/images/shop_branded_mugs_drinkware_1792391771954.jpg"
                     alt="Drinkware"
                     className="w-full h-full object-contain"
                   />

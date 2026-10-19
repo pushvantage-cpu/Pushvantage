@@ -18,7 +18,7 @@ const STUDIO_PRODUCTS: MockupProduct[] = [
     name: 'Reflective Cargo Boiler Suit',
     category: 'Industrial Workwear',
     type: 'overall',
-    defaultImage: '/src/assets/images/product_reflective_overalls_1792390996791.jpg',
+    defaultImage: '/images/product_reflective_overalls_1792390996791.jpg',
     colors: [
       { name: 'Navy & Hi-Vis Orange', hex: '#1E293B', textHex: '#FFFFFF' },
       { name: 'Fluorescent Orange', hex: '#F97316', textHex: '#000000' },
@@ -32,7 +32,7 @@ const STUDIO_PRODUCTS: MockupProduct[] = [
     name: 'Executive Pique Polo Shirt',
     category: 'Corporate Apparel',
     type: 'polo',
-    defaultImage: '/src/assets/images/service_apparel_manufacturing_1792390995327.jpg',
+    defaultImage: '/images/service_apparel_manufacturing_1792390995327.jpg',
     colors: [
       { name: 'Navy Blue', hex: '#1E293B', textHex: '#FFFFFF' },
       { name: 'Vibrant Orange', hex: '#F95700', textHex: '#FFFFFF' },
@@ -46,7 +46,7 @@ const STUDIO_PRODUCTS: MockupProduct[] = [
     name: 'Heavyweight Custom T-Shirt',
     category: 'Screen Printed Apparel',
     type: 'tshirt',
-    defaultImage: '/src/assets/images/service_screen_printing_1792390996118.jpg',
+    defaultImage: '/images/service_screen_printing_1792390996118.jpg',
     colors: [
       { name: 'Solid Black', hex: '#09090B', textHex: '#FFFFFF' },
       { name: 'Studio Orange', hex: '#EA580C', textHex: '#FFFFFF' },
@@ -60,7 +60,7 @@ const STUDIO_PRODUCTS: MockupProduct[] = [
     name: 'Executive Insulated Flask',
     category: 'Corporate Gifts',
     type: 'flask',
-    defaultImage: '/src/assets/images/product_corporate_merchandise_1792390996524.jpg',
+    defaultImage: '/images/product_corporate_merchandise_1792390996524.jpg',
     colors: [
       { name: 'Matte Black', hex: '#171717', textHex: '#FFFFFF' },
       { name: 'Navy Blue', hex: '#1E3A8A', textHex: '#FFFFFF' },

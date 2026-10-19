@@ -67,7 +67,7 @@ export const AboutPage: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-md">
               <img
-                src="/src/assets/images/service_apparel_manufacturing_1792390995327.jpg"
+                src="/images/service_apparel_manufacturing_1792390995327.jpg"
                 alt="Apparel manufacturing production floor at Push Vantage Ltd"
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"

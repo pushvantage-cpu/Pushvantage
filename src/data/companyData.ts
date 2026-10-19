@@ -32,7 +32,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'reflective-overalls',
     categoryLabel: 'Reflective Overalls',
     description: 'Heavy-duty 240gsm poly-cotton industrial cargo boiler suit with dual silver reflective safety stripes across torso, arms, and legs. Features two-way heavy-duty zipper, reinforced knee patches, and multiple utility cargo pockets.',
-    image: '/src/assets/images/product_reflective_overalls_1792390996791.jpg',
+    image: '/images/product_reflective_overalls_1792390996791.jpg',
     features: [
       'Heavy-duty 240gsm poly-cotton twill fabric',
       '50mm high-candlepower dual-tone silver reflective safety tape',
@@ -58,7 +58,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'hoodies-sweatshirts',
     categoryLabel: 'Hoodies & Sweatshirts',
     description: 'Premium 320gsm brushed cotton-fleece hoodie with double-layer drawstring hood, kangaroo pouch pocket, and rib-knit cuffs. Ideal for team merchandise and branded staff casualwear.',
-    image: '/src/assets/images/shop_hoodies_sweatshirts_1792391772659.jpg',
+    image: '/images/shop_hoodies_sweatshirts_1792391772659.jpg',
     features: [
       '320gsm heavyweight cotton-polyester brushed fleece',
       'Double-lined hood with contrast interior options',
@@ -83,7 +83,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 't-shirts-apparel',
     categoryLabel: 'T-Shirts & Apparel',
     description: 'Premium 220gsm combed pique cotton polo shirt with reinforced rib-knit collar and cuffs. Tailored cut engineered for corporate staff wear, trade shows, and branded client events.',
-    image: '/src/assets/images/service_apparel_manufacturing_1792390995327.jpg',
+    image: '/images/service_apparel_manufacturing_1792390995327.jpg',
     features: [
       '220gsm 100% combed cotton or durable poly-cotton blend',
       'Double-stitched hem and side vents for drape and mobility',
@@ -107,7 +107,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 't-shirts-apparel',
     categoryLabel: 'T-Shirts & Apparel',
     description: 'Durable 180-200gsm carded cotton crewneck t-shirts ideal for marketing activations, team merchandise, and custom graphic apparel.',
-    image: '/src/assets/images/service_screen_printing_1792390996118.jpg',
+    image: '/images/service_screen_printing_1792390996118.jpg',
     features: [
       '180gsm - 200gsm 100% carded and ring-spun cotton',
       'Ribbed knit collar with shoulder-to-shoulder taping',
@@ -131,7 +131,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'uniforms-workwear',
     categoryLabel: 'Uniforms & Workwear',
     description: 'Industrial safety two-piece suit consisting of an action-back work jacket with reflective tape and matching cargo work trousers with reinforced tool pockets.',
-    image: '/src/assets/images/hero_workwear_production_1792390994823.jpg',
+    image: '/images/hero_workwear_production_1792390994823.jpg',
     features: [
       'Industrial poly-cotton drill fabric (260gsm)',
       'Concealed heavy-duty zip front jacket with storm flap',
@@ -155,7 +155,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'mugs-drinkware',
     categoryLabel: 'Mugs & Drinkware',
     description: 'Two-tone ceramic coffee mug with matte black exterior and vibrant interior, alongside a 500ml stainless steel insulated travel tumbler customized with company logos.',
-    image: '/src/assets/images/shop_branded_mugs_drinkware_1792391771954.jpg',
+    image: '/images/shop_branded_mugs_drinkware_1792391771954.jpg',
     features: [
       '11oz ceramic mug with vibrant color interior glaze',
       '16oz / 500ml double-wall insulated stainless steel travel tumbler',
@@ -178,7 +178,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'corporate-gifts',
     categoryLabel: 'Corporate Gifts',
     description: 'Curated executive gift set featuring an insulated thermal flask, hardcover A5 leatherette notebook, metal twist pen, and customized gift presentation packaging.',
-    image: '/src/assets/images/product_corporate_merchandise_1792390996524.jpg',
+    image: '/images/product_corporate_merchandise_1792390996524.jpg',
     features: [
       '500ml double-wall stainless steel vacuum insulated thermal flask',
       'Hardcover A5 leatherette journal with ribbon bookmark and elastic closure',
@@ -200,7 +200,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'ppe-safety',
     categoryLabel: 'PPE & Safety Clothing',
     description: 'Industrial grade high-visibility reflector vest with heavy-duty front zip, clear ID badge holder, pen pocket, and dual horizontal and vertical reflective stripes.',
-    image: '/src/assets/images/product_reflective_overalls_1792390996791.jpg',
+    image: '/images/product_reflective_overalls_1792390996791.jpg',
     features: [
       'Breathable polyester mesh or solid fluorescent fabric',
       '50mm high-intensity silver reflective bands',
@@ -222,7 +222,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'promotional-merchandise',
     categoryLabel: 'Promotional Merchandise',
     description: 'Extra-large 30-inch double-canopy windproof umbrella with fiberglass frame and ergonomic soft-touch grip handle, customized with your company branding.',
-    image: '/src/assets/images/product_corporate_merchandise_1792390996524.jpg',
+    image: '/images/product_corporate_merchandise_1792390996524.jpg',
     features: [
       'Double canopy windproof venting system',
       'Sturdy lightweight fiberglass ribs and shaft',
@@ -245,7 +245,7 @@ export const PRODUCTS_CATALOGUE: ProductItem[] = [
     category: 'ppe-safety',
     categoryLabel: 'PPE & Safety Clothing',
     description: 'High-density polyethylene (HDPE) industrial safety helmet with 6-point suspension harness, ratchet adjustment, and sweatband.',
-    image: '/src/assets/images/hero_workwear_production_1792390994823.jpg',
+    image: '/images/hero_workwear_production_1792390994823.jpg',
     features: [
       'High-impact resistant HDPE shell',
       'Adjustable wheel ratchet suspension (fits 53-64cm head circumferences)',
@@ -271,7 +271,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: 'Vibrant, wash-durable textile screen printing, direct-to-film (DTF), heat transfer, and embroidery on all fabric types.',
     fullDesc: 'Push Vantage Ltd provides high-precision garment printing and branding solutions designed to make your logo stand out. Using commercial-grade screen printing carousels, advanced DTF transfers, precision heat presses, and multi-head industrial embroidery machines, we reproduce intricate logos, vivid multi-color artworks, and corporate identities with lasting wash durability.',
     category: 'Printing & Branding',
-    image: '/src/assets/images/service_screen_printing_1792390996118.jpg',
+    image: '/images/service_screen_printing_1792390996118.jpg',
     benefits: [
       'High-density screen printing with vibrant color opacity',
       'Industrial embroidery for crisp, professional executive finishes',
@@ -293,7 +293,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: 'Full-cycle garment manufacturing from pattern cutting, fabric selection, and bespoke tailoring to finished boxed apparel.',
     fullDesc: 'We manufacture customized apparel tailored to your exact specifications. From choosing durable, breathable fabrics (100% pique cotton, poly-cotton blends, heavy twill, and technical textiles) to precision pattern grading, stitching, and finishing, Push Vantage Ltd ensures consistent sizing and heavy-duty seams across your entire order.',
     category: 'Apparel Manufacturing',
-    image: '/src/assets/images/service_apparel_manufacturing_1792390995327.jpg',
+    image: '/images/service_apparel_manufacturing_1792390995327.jpg',
     benefits: [
       'Tailored cut-and-sew garment patterns designed for comfort and mobility',
       'Reinforced double-needle stitching on high-stress seams',
@@ -315,7 +315,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: 'Heavy-duty industrial cargo overalls with high-visibility reflective bands, multi-pocket utility, and reinforced knees.',
     fullDesc: 'Our signature reflective cargo overalls are engineered for demanding industrial, mechanical, construction, and logistics environments. Crafted from rugged heavy-duty twill fabric, each overall features high-grade 3M-style reflective safety tape, reinforced cargo utility pockets, heavy-duty two-way front zippers, and elasticated waistbands for maximum all-day utility and safety.',
     category: 'Industrial Workwear',
-    image: '/src/assets/images/product_reflective_overalls_1792390996791.jpg',
+    image: '/images/product_reflective_overalls_1792390996791.jpg',
     benefits: [
       'Day and night visibility with dual-tone 360-degree reflective bands',
       'Functional cargo pockets for tools, measuring tapes, and phones',
@@ -337,7 +337,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: 'Certified safety gear protecting workers: helmets, high-visibility reflector vests, safety boots, and gloves.',
     fullDesc: 'Workplace safety is paramount. Push Vantage Ltd equips Kenyan industries, contractors, and field teams with comprehensive personal protective equipment (PPE). We supply and brand safety gear to ensure your teams meet occupational health and safety standards while staying protected on the job.',
     category: 'Safety & Protection',
-    image: '/src/assets/images/hero_workwear_production_1792390994823.jpg',
+    image: '/images/hero_workwear_production_1792390994823.jpg',
     benefits: [
       'Compliant safety gear meeting industrial safety benchmarks',
       'Company logo branding available on reflector vests and hard hats',
@@ -359,7 +359,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: 'Crisp executive staff shirts, tailored trousers, blazers, and branded front-office uniforms that reflect professionalism.',
     fullDesc: 'First impressions matter. Push Vantage Ltd designs and crafts polished corporate uniform programs that elevate your brand image. From tailored button-down executive shirts and branded polo shirts to front-desk blazers and hospitality wear, our uniforms unite your workforce with distinguished elegance and lasting fabric quality.',
     category: 'Corporate Uniforms',
-    image: '/src/assets/images/service_apparel_manufacturing_1792390995327.jpg',
+    image: '/images/service_apparel_manufacturing_1792390995327.jpg',
     benefits: [
       'Tailored corporate fits that flatter and provide day-long comfort',
       'Wrinkle-resistant and easy-iron fabric selections',
@@ -381,7 +381,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: 'Curated branded executive merchandise: thermal drinkware, leatherette notebooks, pens, umbrellas, and custom gift boxes.',
     fullDesc: 'Strengthen client relationships and reward employees with memorable, high-utility promotional merchandise. Push Vantage Ltd sources and brands premium corporate gifts using laser engraving, UV printing, debossing, and screen printing. Whether for annual general meetings, corporate retreats, or client appreciation campaigns, we deliver gifts that make a lasting impression.',
     category: 'Corporate Gifts',
-    image: '/src/assets/images/product_corporate_merchandise_1792390996524.jpg',
+    image: '/images/product_corporate_merchandise_1792390996524.jpg',
     benefits: [
       'High perceived value with functional, daily-use executive items',
       'Precision laser engraving and tactile debossing',
@@ -407,7 +407,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     category: 'reflective',
     categoryLabel: 'Reflective Overalls & PPE',
     description: 'Custom manufactured two-tone navy and hi-vis orange cargo boiler suits equipped with 50mm reflective bands and chest company branding.',
-    image: '/src/assets/images/product_reflective_overalls_1792390996791.jpg',
+    image: '/images/product_reflective_overalls_1792390996791.jpg',
     details: ['Heavy-duty 240gsm twill', 'Reflective safety bands', 'Reinforced knee cargo utility', 'Customized for Nairobi construction team'],
   },
   {
@@ -416,7 +416,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     category: 'apparel',
     categoryLabel: 'Apparel & Uniforms',
     description: 'Custom tailored charcoal black fleece hoodies with vibrant orange interior lining and computerized shield embroidery.',
-    image: '/src/assets/images/shop_hoodies_sweatshirts_1792391772659.jpg',
+    image: '/images/shop_hoodies_sweatshirts_1792391772659.jpg',
     details: ['320gsm brushed fleece', 'Custom drawstrings', 'Multi-color chest embroidery', 'Rib-knit cuffs'],
   },
   {
@@ -425,7 +425,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     category: 'printing',
     categoryLabel: 'Custom Printing',
     description: 'Vibrant orange direct textile screen printing run executed with multi-stage heat curing for wash durability.',
-    image: '/src/assets/images/service_screen_printing_1792390996118.jpg',
+    image: '/images/service_screen_printing_1792390996118.jpg',
     details: ['Textile carousel printing', 'Precision mesh screens', 'Thermal curing process', 'Consistent pantone ink matching'],
   },
   {
@@ -434,7 +434,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     category: 'gifts',
     categoryLabel: 'Corporate Gifts & Branding',
     description: 'Matte black two-tone ceramic mugs and laser-engraved stainless steel travel tumblers customized for client gifting.',
-    image: '/src/assets/images/shop_branded_mugs_drinkware_1792391771954.jpg',
+    image: '/images/shop_branded_mugs_drinkware_1792391771954.jpg',
     details: ['Laser engraved logo', 'Two-tone interior color glaze', 'Spill-resistant push-to-sip lid', 'Presentation boxed'],
   },
   {
@@ -443,7 +443,7 @@ export const GALLERY_PROJECTS: GalleryProject[] = [
     category: 'apparel',
     categoryLabel: 'Apparel & Uniforms',
     description: 'Full-batch apparel production of executive navy pique polo shirts with reinforced collars and computerized crest embroidery.',
-    image: '/src/assets/images/service_apparel_manufacturing_1792390995327.jpg',
+    image: '/images/service_apparel_manufacturing_1792390995327.jpg',
     details: ['Combed pique cotton', 'Precision pattern cutting', 'Overlock safety stitching', 'Multi-head logo embroidery'],
   },
 ];
