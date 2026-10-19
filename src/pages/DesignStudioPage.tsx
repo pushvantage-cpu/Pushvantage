@@ -4,6 +4,7 @@ import { PRODUCTS_CATALOGUE, COMPANY_INFO, createWhatsAppEnquiryUrl } from '../d
 import { ProductItem } from '../types';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Upload, RotateCw, ZoomIn, ZoomOut, ArrowRight, ShoppingBag, Check, MessageSquare, Trash2, Eye } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 export const DesignStudioPage: React.FC = () => {
   const { selectedProductId, addToCart, navigateTo, openQuoteModal } = useRouter();
@@ -189,11 +190,12 @@ export const DesignStudioPage: React.FC = () => {
             {/* Interactive Preview Canvas */}
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200 flex items-center justify-center select-none">
               {/* Garment Image */}
-              <img
+              <OptimizedImage
                 src={currentProduct.image}
                 alt={currentProduct.name}
+                priority={true}
                 className="w-full h-full object-cover transition-opacity duration-300"
-                referrerPolicy="no-referrer"
+                containerClassName="w-full h-full"
               />
 
               {/* Tint Overlay for selected color */}

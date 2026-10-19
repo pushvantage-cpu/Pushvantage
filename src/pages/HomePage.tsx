@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from '../context/RouterContext';
 import { COMPANY_INFO, PRODUCTS_CATALOGUE } from '../data/companyData';
 import { ArrowRight, Palette, ShoppingBag, Shield, Clock, Truck, MessageSquare } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 export const HomePage: React.FC = () => {
   const { navigateTo, openStudioWithProduct } = useRouter();
@@ -70,10 +71,12 @@ export const HomePage: React.FC = () => {
                   onClick={() => openStudioWithProduct('reflective-cargo-overall')}
                   className="absolute left-[3%] top-0 w-[48%] -rotate-6 aspect-square overflow-hidden rounded-2xl bg-white shadow-md border border-[#E8E2D8] p-3 transition-transform hover:scale-105 hover:rotate-0 cursor-pointer"
                 >
-                  <img
+                  <OptimizedImage
                     src="/images/product_reflective_overalls_1792390996791.jpg"
                     alt="Reflective Cargo Overalls"
+                    priority={true}
                     className="w-full h-full object-contain"
+                    containerClassName="w-full h-full"
                   />
                   <span className="absolute left-2.5 top-2.5 rounded bg-white/95 px-2 py-0.5 text-[9px] font-bold text-neutral-800 border border-neutral-200">
                     Overalls
@@ -88,10 +91,12 @@ export const HomePage: React.FC = () => {
                   onClick={() => openStudioWithProduct('heavyweight-corporate-hoodie')}
                   className="absolute right-0 top-[12%] w-[50%] rotate-3 aspect-square overflow-hidden rounded-2xl bg-white shadow-md border border-[#E8E2D8] p-3 transition-transform hover:scale-105 hover:rotate-0 cursor-pointer"
                 >
-                  <img
+                  <OptimizedImage
                     src="/images/shop_hoodies_sweatshirts_1792391772659.jpg"
                     alt="Corporate Hoodie"
+                    priority={true}
                     className="w-full h-full object-contain"
+                    containerClassName="w-full h-full"
                   />
                   <span className="absolute left-2.5 top-2.5 rounded bg-white/95 px-2 py-0.5 text-[9px] font-bold text-neutral-800 border border-neutral-200">
                     Hoodie
@@ -106,10 +111,12 @@ export const HomePage: React.FC = () => {
                   onClick={() => openStudioWithProduct('ceramic-mugs-drinkware')}
                   className="absolute bottom-2 left-[14%] w-[44%] -rotate-3 aspect-square overflow-hidden rounded-2xl bg-white shadow-md border border-[#E8E2D8] p-3 transition-transform hover:scale-105 hover:rotate-0 cursor-pointer"
                 >
-                  <img
+                  <OptimizedImage
                     src="/images/shop_branded_mugs_drinkware_1792391771954.jpg"
                     alt="Drinkware"
+                    priority={true}
                     className="w-full h-full object-contain"
+                    containerClassName="w-full h-full"
                   />
                   <span className="absolute left-2.5 top-2.5 rounded bg-white/95 px-2 py-0.5 text-[9px] font-bold text-neutral-800 border border-neutral-200">
                     Drinkware
@@ -218,13 +225,13 @@ export const HomePage: React.FC = () => {
                 className="group bg-white rounded-2xl border border-[#E8E2D8] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between cursor-pointer hover:-translate-y-1"
               >
                 <div className="aspect-square bg-white relative p-6 flex items-center justify-center overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                    referrerPolicy="no-referrer"
+                    containerClassName="w-full h-full"
                   />
-                  <span className="absolute top-3 left-3 bg-white/95 border border-[#E8E2D8] text-neutral-700 text-[10px] font-semibold px-2 py-0.5 rounded shadow-2xs">
+                  <span className="absolute top-3 left-3 bg-white/95 border border-[#E8E2D8] text-neutral-700 text-[10px] font-semibold px-2 py-0.5 rounded shadow-2xs z-10">
                     {product.categoryLabel}
                   </span>
                 </div>

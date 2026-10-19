@@ -3,6 +3,7 @@ import { useRouter } from '../context/RouterContext';
 import { PRODUCTS_CATALOGUE } from '../data/companyData';
 import { ProductCategory, ProductItem } from '../types';
 import { Search, X, Palette, ArrowRight, SlidersHorizontal } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 interface CategoryFilter {
   id: 'all' | ProductCategory;
@@ -141,15 +142,15 @@ export const ShopPage: React.FC = () => {
                 >
                   {/* Clean Product Visual Container */}
                   <div className="aspect-square bg-white relative p-4 flex items-center justify-center overflow-hidden">
-                    <img
+                    <OptimizedImage
                       src={product.image}
                       alt={product.name}
                       className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300"
-                      referrerPolicy="no-referrer"
+                      containerClassName="w-full h-full"
                     />
 
                     {/* Subtle Category Pill Tag on Top Left */}
-                    <span className="absolute top-3 left-3 bg-white/95 border border-[#E8E2D8] text-neutral-700 text-[10px] font-semibold px-2 py-0.5 rounded shadow-2xs">
+                    <span className="absolute top-3 left-3 bg-white/95 border border-[#E8E2D8] text-neutral-700 text-[10px] font-semibold px-2 py-0.5 rounded shadow-2xs z-10">
                       {product.categoryLabel}
                     </span>
 

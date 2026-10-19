@@ -1,29 +1,64 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { RouterProvider, useRouter } from './context/RouterContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import { QuoteModal } from './components/QuoteModal';
 import { HomePage } from './pages/HomePage';
-import { ShopPage } from './pages/ShopPage';
-import { ProductDetailsPage } from './pages/ProductDetailsPage';
-import { DesignStudioPage } from './pages/DesignStudioPage';
-import { AboutPage } from './pages/AboutPage';
-import { ServicesPage } from './pages/ServicesPage';
-import { GalleryPage } from './pages/GalleryPage';
-import { HowItWorksPage } from './pages/HowItWorksPage';
-import { FaqsPage } from './pages/FaqsPage';
-import { ContactPage } from './pages/ContactPage';
-import { CartPage } from './pages/CartPage';
-import { TrackOrderPage } from './pages/TrackOrderPage';
-import { AuthModal } from './components/AuthModal';
-import { AdminModal } from './components/AdminModal';
 import { COMPANY_INFO } from './data/companyData';
-import { MessageSquare, ArrowUp, ShoppingBag } from 'lucide-react';
+import { MessageSquare, ArrowUp, ShoppingBag, Loader2 } from 'lucide-react';
+
+// Code-split secondary pages for instant initial paint and massive concurrency handling
+const ShopPage = lazy(() => import('./pages/ShopPage').then((m) => ({ default: m.ShopPage })));
+const ProductDetailsPage = lazy(() =>
+  import('./pages/ProductDetailsPage').then((m) => ({ default: m.ProductDetailsPage }))
+);
+const DesignStudioPage = lazy(() =>
+  import('./pages/DesignStudioPage').then((m) => ({ default: m.DesignStudioPage }))
+);
+const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+const ServicesPage = lazy(() =>
+  import('./pages/ServicesPage').then((m) => ({ default: m.ServicesPage }))
+);
+const GalleryPage = lazy(() =>
+  import('./pages/GalleryPage').then((m) => ({ default: m.GalleryPage }))
+);
+const HowItWorksPage = lazy(() =>
+  import('./pages/HowItWorksPage').then((m) => ({ default: m.HowItWorksPage }))
+);
+const FaqsPage = lazy(() => import('./pages/FaqsPage').then((m) => ({ default: m.FaqsPage })));
+const ContactPage = lazy(() =>
+  import('./pages/ContactPage').then((m) => ({ default: m.ContactPage }))
+);
+const CartPage = lazy(() => import('./pages/CartPage').then((m) => ({ default: m.CartPage })));
+const TrackOrderPage = lazy(() =>
+  import('./pages/TrackOrderPage').then((m) => ({ default: m.TrackOrderPage }))
+);
+
+// Lazy load modals so they do not burden the initial page load
+const QuoteModal = lazy(() =>
+  import('./components/QuoteModal').then((m) => ({ default: m.QuoteModal }))
+);
+const AuthModal = lazy(() =>
+  import('./components/AuthModal').then((m) => ({ default: m.AuthModal }))
+);
+const AdminModal = lazy(() =>
+  import('./components/AdminModal').then((m) => ({ default: m.AdminModal }))
+);
+
+// High-performance loading fallback
+const PageSkeleton: React.FC = () => (
+  <div className="min-h-[60vh] flex flex-col items-center justify-center p-8">
+    <div className="w-12 h-12 rounded-full border-2 border-neutral-200 border-t-[#F95700] animate-spin mb-4" />
+    <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">
+      Loading Push Vantage...
+    </span>
+  </div>
+);
 
 const PageRenderer: React.FC = () => {
   const { currentPage, cartCount, navigateTo } = useRouter();
   const [showScrollTop, setShowScrollTop] = useState(false);
 
+  // Passive scroll listener to maintain 60-120fps scrolling under high load
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 400) {
@@ -33,8 +68,28 @@ const PageRenderer: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Idle route prefetcher for instantaneous page navigation
+  useEffect(() => {
+    const prefetchKeyRoutes = () => {
+      // Warm up the most frequent routes in the background
+      import('./pages/ShopPage');
+      import('./pages/DesignStudioPage');
+      import('./pages/ContactPage');
+    };
+
+    if ('requestIdleCallback' in window) {
+      const idleId = window.requestIdleCallback(prefetchKeyRoutes, { timeout: 2500 });
+      return () => {
+        window.cancelIdleCallback(idleId);
+      };
+    } else {
+      const timer = setTimeout(prefetchKeyRoutes, 1500);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const scrollToTop = () => {
@@ -77,22 +132,30 @@ const PageRenderer: React.FC = () => {
       {/* Navigation Top Bar */}
       <Navbar />
 
-      {/* Main Page Body */}
+      {/* Main Page Body with Suspense code splitting */}
       <main className="flex-1 w-full">
-        {renderActivePage()}
+        <Suspense fallback={<PageSkeleton />}>
+          {renderActivePage()}
+        </Suspense>
       </main>
 
       {/* Global Brand Footer */}
       <Footer />
 
       {/* Global Interactive Quote Request Modal */}
-      <QuoteModal />
+      <Suspense fallback={null}>
+        <QuoteModal />
+      </Suspense>
 
       {/* Public Customer Sign In & Order Application Modal */}
-      <AuthModal />
+      <Suspense fallback={null}>
+        <AuthModal />
+      </Suspense>
 
       {/* Workshop Administration Portal Modal (pushvantage@gmail.com) */}
-      <AdminModal />
+      <Suspense fallback={null}>
+        <AdminModal />
+      </Suspense>
 
       {/* Floating Action Buttons */}
       <aside aria-label="Quick Actions" className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2.5">
@@ -100,7 +163,7 @@ const PageRenderer: React.FC = () => {
         {cartCount > 0 && currentPage !== 'cart' && (
           <button
             onClick={() => navigateTo('cart')}
-            className="flex sm:hidden items-center gap-1.5 px-4 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs rounded-full shadow-lg border border-neutral-700"
+            className="flex sm:hidden items-center gap-1.5 px-4 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs rounded-full shadow-lg border border-neutral-700 cursor-pointer"
           >
             <ShoppingBag className="w-4 h-4 text-[#F95700]" />
             <span>Cart ({cartCount})</span>

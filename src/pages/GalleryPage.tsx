@@ -4,6 +4,7 @@ import { GALLERY_PROJECTS, COMPANY_INFO } from '../data/companyData';
 import { GalleryProject } from '../types';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { X, ZoomIn, ArrowRight, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 export const GalleryPage: React.FC = () => {
   const { openQuoteModal } = useRouter();
@@ -79,11 +80,11 @@ export const GalleryPage: React.FC = () => {
                   onClick={() => setSelectedProject(project)}
                   className="aspect-4/3 overflow-hidden relative cursor-pointer bg-neutral-100"
                 >
-                  <img
+                  <OptimizedImage
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    referrerPolicy="no-referrer"
+                    containerClassName="w-full h-full"
                   />
                   <div className="absolute inset-0 bg-neutral-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-900/80 text-white text-xs font-medium rounded-lg backdrop-blur-xs">
@@ -155,11 +156,12 @@ export const GalleryPage: React.FC = () => {
 
             <div className="p-6 space-y-6">
               <div className="aspect-16/10 rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200">
-                <img
+                <OptimizedImage
                   src={selectedProject.image}
                   alt={selectedProject.title}
+                  priority={true}
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
+                  containerClassName="w-full h-full"
                 />
               </div>
 

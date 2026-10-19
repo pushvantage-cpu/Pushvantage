@@ -26,6 +26,7 @@ import {
   AlertCircle,
   Lock,
 } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 const STATUS_STAGES: {
   key: OrderStatus;
@@ -598,11 +599,11 @@ export const TrackOrderPage: React.FC = () => {
                     >
                       <div className="flex items-center gap-4">
                         <div className="w-16 h-16 rounded-xl bg-white border border-neutral-200 overflow-hidden shrink-0">
-                          <img
+                          <OptimizedImage
                             src={item.image}
                             alt={item.productName}
                             className="w-full h-full object-cover"
-                            referrerPolicy="no-referrer"
+                            containerClassName="w-full h-full"
                           />
                         </div>
                         <div className="space-y-1">

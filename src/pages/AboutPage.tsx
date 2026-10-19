@@ -3,6 +3,7 @@ import { useRouter } from '../context/RouterContext';
 import { COMPANY_INFO } from '../data/companyData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Shield, Sparkles, Target, Eye, Users, Scissors, Printer, CheckCircle2, ArrowRight } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 export const AboutPage: React.FC = () => {
   const { navigateTo, openQuoteModal } = useRouter();
@@ -66,11 +67,11 @@ export const AboutPage: React.FC = () => {
 
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-md">
-              <img
+              <OptimizedImage
                 src="/images/service_apparel_manufacturing_1792390995327.jpg"
                 alt="Apparel manufacturing production floor at Push Vantage Ltd"
                 className="w-full h-auto object-cover"
-                referrerPolicy="no-referrer"
+                containerClassName="w-full h-full"
               />
               <div className="p-4 bg-white border-t border-neutral-200">
                 <div className="text-xs font-bold text-neutral-900">Garment Production & Tailoring</div>

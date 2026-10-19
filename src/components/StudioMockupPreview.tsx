@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useRouter } from '../context/RouterContext';
 import { COMPANY_INFO, createWhatsAppEnquiryUrl } from '../data/companyData';
 import { Upload, ArrowRight, MessageSquare, RotateCw, ZoomIn, ZoomOut, Check } from 'lucide-react';
+import { OptimizedImage } from './OptimizedImage';
 
 interface MockupProduct {
   id: string;
@@ -141,11 +142,12 @@ export const StudioMockupPreview: React.FC = () => {
           {/* Garment / Product Display Frame */}
           <div className="relative w-full max-w-md aspect-4/3 rounded-xl overflow-hidden bg-white shadow-sm border border-neutral-200 flex items-center justify-center">
             {/* Base Product Real Photo */}
-            <img
+            <OptimizedImage
               src={selectedProduct.defaultImage}
               alt={selectedProduct.name}
+              priority={true}
               className="w-full h-full object-cover transition-opacity duration-300"
-              referrerPolicy="no-referrer"
+              containerClassName="w-full h-full"
             />
 
             {/* Tint Overlay corresponding to selected color swatch */}

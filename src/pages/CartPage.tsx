@@ -4,6 +4,7 @@ import { COMPANY_INFO, createWhatsAppEnquiryUrl } from '../data/companyData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { OnlineOrder } from '../types';
 import { ShoppingBag, Trash2, Plus, Minus, ArrowRight, MessageSquare, Send, CheckCircle2, ShieldCheck, CreditCard, X, Truck, Copy, Check } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 export const CartPage: React.FC = () => {
   const { cart, updateCartQuantity, removeFromCart, clearCart, navigateTo, openQuoteModal, placeOrder } = useRouter();
@@ -141,11 +142,11 @@ export const CartPage: React.FC = () => {
                   <div className="flex items-start gap-4">
                     {/* Thumbnail */}
                     <div className="w-20 h-20 rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 shrink-0 relative">
-                      <img
+                      <OptimizedImage
                         src={item.image}
                         alt={item.productName}
                         className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
+                        containerClassName="w-full h-full"
                       />
                       {item.artworkDataUrl && (
                         <div className="absolute bottom-1 right-1 w-6 h-6 rounded bg-black/50 p-0.5">

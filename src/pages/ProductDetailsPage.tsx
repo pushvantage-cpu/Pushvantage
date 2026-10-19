@@ -3,6 +3,7 @@ import { useRouter } from '../context/RouterContext';
 import { PRODUCTS_CATALOGUE, COMPANY_INFO, createWhatsAppEnquiryUrl } from '../data/companyData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { Palette, ShoppingBag, ArrowRight, Check, MessageSquare, Shield, Truck, RotateCcw } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 export const ProductDetailsPage: React.FC = () => {
   const { selectedProductId, openStudioWithProduct, openQuoteModal, addToCart, navigateTo } = useRouter();
@@ -54,13 +55,14 @@ export const ProductDetailsPage: React.FC = () => {
           {/* Left Column: Product Imagery (6 cols) */}
           <div className="lg:col-span-6 space-y-4">
             <div className="relative aspect-square rounded-3xl overflow-hidden bg-neutral-100 border border-neutral-200 shadow-md">
-              <img
+              <OptimizedImage
                 src={product.image}
                 alt={product.name}
+                priority={true}
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+                containerClassName="w-full h-full"
               />
-              <div className="absolute top-4 left-4 bg-neutral-900/85 backdrop-blur-xs text-white text-xs font-mono uppercase px-3 py-1 rounded">
+              <div className="absolute top-4 left-4 bg-neutral-900/85 backdrop-blur-xs text-white text-xs font-mono uppercase px-3 py-1 rounded z-10">
                 {product.categoryLabel}
               </div>
 

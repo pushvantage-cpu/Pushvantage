@@ -3,6 +3,7 @@ import { useRouter } from '../context/RouterContext';
 import { SERVICES_DATA, COMPANY_INFO } from '../data/companyData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { CheckCircle2, ArrowRight, Printer, Scissors, ShieldAlert, Sparkles, Shirt, Gift, MessageSquare } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 export const ServicesPage: React.FC = () => {
   const { openQuoteModal } = useRouter();
@@ -79,13 +80,13 @@ export const ServicesPage: React.FC = () => {
                 {/* Visual Image Column (5 cols) */}
                 <div className={`lg:col-span-5 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="relative rounded-2xl overflow-hidden bg-neutral-100 shadow-inner aspect-4/3">
-                    <img
+                    <OptimizedImage
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
+                      containerClassName="w-full h-full"
                     />
-                    <div className="absolute top-4 left-4 bg-neutral-900/85 backdrop-blur-xs text-white text-xs font-mono uppercase px-3 py-1 rounded">
+                    <div className="absolute top-4 left-4 bg-neutral-900/85 backdrop-blur-xs text-white text-xs font-mono uppercase px-3 py-1 rounded z-10">
                       {service.category}
                     </div>
                   </div>
